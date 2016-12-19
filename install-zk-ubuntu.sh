@@ -69,5 +69,7 @@ sudo chmod -R 777 /tmp/zookeeper/
 mkdir -p /tmp/zookeeper/data.zk
 touch /tmp/zookeeper/data.zk/myid
 sudo chmod -R 777 /tmp/zookeeper/data.zk/
+cd /tmp/zookeeper
+ls /tmp/zookeeper
 
 echo "Done!"
