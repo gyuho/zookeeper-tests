@@ -1,2 +1,4 @@
 /zookeeper
 zookeeper-*.gz
+*.etcd
+
