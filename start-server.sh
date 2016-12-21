@@ -3,8 +3,8 @@ set -e
 
 echo "Cleaning up Zookeeper data directory..."
 cd /tmp
-rm -rf /tmp/zookeeper
 DATA_DIR=/tmp/zookeeper/data.zk
+rm -rf ${DATA_DIR}
 mkdir -p ${DATA_DIR}
 
 sleep 2s
