@@ -1,0 +1,8 @@
+hash: abf2810ef3fb4796654e12a6bf66dd23aef70ed606580deaa14d7cdbb75f62ac
+updated: 2016-12-21T13:38:29.959557491-08:00
+imports:
+- name: github.com/samuel/go-zookeeper
+  version: 1d7be4effb13d2d908342d349d71a284a7542693
+  subpackages:
+  - zk
+testImports: []
