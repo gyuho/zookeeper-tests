@@ -39,7 +39,7 @@ func main() {
 
 		val := randBytes(valSize)
 		for i := 0; i < writesN; i++ {
-			pairs <- zkOp{Key: sequentialKey(keySize, i), Value: val}
+			pairs <- zkOp{Key: "/" + sequentialKey(keySize, i), Value: val}
 		}
 	}()
 
@@ -89,6 +89,11 @@ func main() {
 			}
 		}(i, conns[i])
 	}
+	defer func() {
+		for _, conn := range conns {
+			conn.Close()
+		}
+	}()
 	wg.Wait()
 	close(rs)
 	<-donec
