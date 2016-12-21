@@ -28,7 +28,7 @@ EOF
 sleep 2s
 echo "Starting Zookeeper..."
 cd ./zookeeper
-nohup java -cp zookeeper-3.4.9.jar:lib/slf4j-api-1.6.1.jar:lib/slf4j-log4j12-1.6.1.jar:lib/log4j-1.2.16.jar:conf org.apache.zookeeper.server.quorum.QuorumPeerMain ./zookeeper/zookeeper.config > ../zookeeper-server.log 2>&1 &
+nohup java -cp zookeeper-3.4.9.jar:lib/slf4j-api-1.6.1.jar:lib/slf4j-log4j12-1.6.1.jar:lib/log4j-1.2.16.jar:conf org.apache.zookeeper.server.quorum.QuorumPeerMain ./zookeeper.config > ../zookeeper-server.log 2>&1 &
 
 sleep 3s
 echo "Done"
