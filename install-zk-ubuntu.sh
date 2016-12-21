@@ -69,7 +69,6 @@ sudo chmod -R 777 ./zookeeper/
 mkdir -p ./zookeeper/data.zk
 touch ./zookeeper/data.zk/myid
 sudo chmod -R 777 ./zookeeper/data.zk/
-cd ./zookeeper
-ls ./zookeeper
+sudo find ./zookeeper
 
 echo "Done!"
