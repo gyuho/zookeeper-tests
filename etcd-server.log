@@ -1,71 +1,37 @@
-2016-12-28 11:53:14.064062 I | etcdmain: etcd Version: 3.1.0-rc.1+git
-2016-12-28 11:53:14.064129 I | etcdmain: Git SHA: b940e0d
-2016-12-28 11:53:14.064140 I | etcdmain: Go Version: go1.7.4
-2016-12-28 11:53:14.064148 I | etcdmain: Go OS/Arch: linux/amd64
-2016-12-28 11:53:14.064161 I | etcdmain: setting maximum number of CPUs to 8, total number of available CPUs is 8
-2016-12-28 11:53:14.064176 W | etcdmain: no data-dir provided, using default data-dir ./my-etcd-1.etcd
-2016-12-28 11:53:14.065950 I | embed: listening for peers on http://localhost:2380
-2016-12-28 11:53:14.066325 I | embed: listening for client requests on localhost:2379
-2016-12-28 11:53:14.075159 I | etcdserver: name = my-etcd-1
-2016-12-28 11:53:14.075179 I | etcdserver: data dir = my-etcd-1.etcd
-2016-12-28 11:53:14.075190 I | etcdserver: member dir = my-etcd-1.etcd/member
-2016-12-28 11:53:14.075199 I | etcdserver: heartbeat = 100ms
-2016-12-28 11:53:14.075207 I | etcdserver: election = 1000ms
-2016-12-28 11:53:14.075216 I | etcdserver: snapshot count = 10000
-2016-12-28 11:53:14.075227 I | etcdserver: advertise client URLs = http://localhost:2379
-2016-12-28 11:53:14.075238 I | etcdserver: initial advertise peer URLs = http://localhost:2380
-2016-12-28 11:53:14.075250 I | etcdserver: initial cluster = my-etcd-1=http://localhost:2380
-2016-12-28 11:53:14.306294 I | etcdserver: starting member fd32987dcd0511e0 in cluster 755b248bfe852f6e
-2016-12-28 11:53:14.306864 I | raft: fd32987dcd0511e0 became follower at term 0
-2016-12-28 11:53:14.306947 I | raft: newRaft fd32987dcd0511e0 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
-2016-12-28 11:53:14.306960 I | raft: fd32987dcd0511e0 became follower at term 1
-2016-12-28 11:53:14.325341 I | etcdserver: starting server... [version: 3.1.0-rc.1+git, cluster version: to_be_decided]
-2016-12-28 11:53:14.327970 I | etcdserver/membership: added member fd32987dcd0511e0 [http://localhost:2380] to cluster 755b248bfe852f6e
-2016-12-28 11:53:15.107709 I | raft: fd32987dcd0511e0 is starting a new election at term 1
-2016-12-28 11:53:15.108360 I | raft: fd32987dcd0511e0 became candidate at term 2
-2016-12-28 11:53:15.108535 I | raft: fd32987dcd0511e0 received MsgVoteResp from fd32987dcd0511e0 at term 2
-2016-12-28 11:53:15.108573 I | raft: fd32987dcd0511e0 became leader at term 2
-2016-12-28 11:53:15.108588 I | raft: raft.node: fd32987dcd0511e0 elected leader fd32987dcd0511e0 at term 2
-2016-12-28 11:53:15.110526 I | etcdserver: setting up the initial cluster version to 3.1
-2016-12-28 11:53:15.112454 N | etcdserver/membership: set the initial cluster version to 3.1
-2016-12-28 11:53:15.112506 I | etcdserver/api: enabled capabilities for version 3.1
-2016-12-28 11:53:15.112554 I | embed: ready to serve client requests
-2016-12-28 11:53:15.112782 E | etcdmain: forgot to set Type=notify in systemd service file?
-2016-12-28 11:53:15.112838 I | etcdserver: published {Name:my-etcd-1 ClientURLs:[http://localhost:2379]} to cluster 755b248bfe852f6e
-2016-12-28 11:53:15.117224 N | embed: serving insecure client requests on 127.0.0.1:2379, this is strongly discouraged!
-2016-12-28 11:53:22.830673 I | etcdserver: start to snapshot (applied: 10043, lastsnap: 0)
-2016-12-28 11:53:22.848620 I | etcdserver: saved snapshot at index 10043
-2016-12-28 11:53:22.848820 I | etcdserver: compacted raft log at 5043
-2016-12-28 11:53:24.029362 I | etcdserver: start to snapshot (applied: 20078, lastsnap: 10043)
-2016-12-28 11:53:24.050760 I | etcdserver: saved snapshot at index 20078
-2016-12-28 11:53:24.050954 I | etcdserver: compacted raft log at 15078
-2016-12-28 11:53:25.093280 I | etcdserver: start to snapshot (applied: 30112, lastsnap: 20078)
-2016-12-28 11:53:25.114374 I | etcdserver: saved snapshot at index 30112
-2016-12-28 11:53:25.114523 I | etcdserver: compacted raft log at 25112
-2016-12-28 11:53:26.323355 I | etcdserver: start to snapshot (applied: 40115, lastsnap: 30112)
-2016-12-28 11:53:26.340008 I | etcdserver: saved snapshot at index 40115
-2016-12-28 11:53:26.340170 I | etcdserver: compacted raft log at 35115
-2016-12-28 11:53:27.597250 I | etcdserver: start to snapshot (applied: 50137, lastsnap: 40115)
-2016-12-28 11:53:27.617264 I | etcdserver: saved snapshot at index 50137
-2016-12-28 11:53:27.617448 I | etcdserver: compacted raft log at 45137
-2016-12-28 11:53:28.776001 I | etcdserver: start to snapshot (applied: 60143, lastsnap: 50137)
-2016-12-28 11:53:28.799702 I | etcdserver: saved snapshot at index 60143
-2016-12-28 11:53:28.799908 I | etcdserver: compacted raft log at 55143
-2016-12-28 11:53:30.134084 I | etcdserver: start to snapshot (applied: 70180, lastsnap: 60143)
-2016-12-28 11:53:30.157780 I | etcdserver: saved snapshot at index 70180
-2016-12-28 11:53:30.157909 I | etcdserver: compacted raft log at 65180
-2016-12-28 11:53:31.412847 I | etcdserver: start to snapshot (applied: 80233, lastsnap: 70180)
-2016-12-28 11:53:31.435179 I | etcdserver: saved snapshot at index 80233
-2016-12-28 11:53:31.435360 I | etcdserver: compacted raft log at 75233
-2016-12-28 11:53:32.239194 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000001-00000000000150dd.wal is created
-2016-12-28 11:53:32.746398 I | etcdserver: start to snapshot (applied: 90239, lastsnap: 80233)
-2016-12-28 11:53:32.767019 I | etcdserver: saved snapshot at index 90239
-2016-12-28 11:53:32.767143 I | etcdserver: compacted raft log at 85239
-2016-12-28 11:53:33.885182 I | etcdserver: start to snapshot (applied: 100240, lastsnap: 90239)
-2016-12-28 11:53:33.903243 I | etcdserver: saved snapshot at index 100240
-2016-12-28 11:53:33.903406 I | etcdserver: compacted raft log at 95240
-2016-12-28 11:53:44.326728 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000000273b.snap successfully
-2016-12-28 11:53:44.326963 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000004e6e.snap successfully
-2016-12-28 11:53:44.327109 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000075a0.snap successfully
-2016-12-28 11:53:44.327248 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000009cb3.snap successfully
-2016-12-28 11:53:44.327380 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000000c3d9.snap successfully
+2016-12-28 13:14:45.185268 I | etcdmain: etcd Version: 3.1.0-rc.1+git
+2016-12-28 13:14:45.185738 I | etcdmain: Git SHA: 9690220
+2016-12-28 13:14:45.185781 I | etcdmain: Go Version: go1.7.4
+2016-12-28 13:14:45.185815 I | etcdmain: Go OS/Arch: linux/amd64
+2016-12-28 13:14:45.185853 I | etcdmain: setting maximum number of CPUs to 8, total number of available CPUs is 8
+2016-12-28 13:14:45.185900 W | etcdmain: no data-dir provided, using default data-dir ./my-etcd-1.etcd
+2016-12-28 13:14:45.186677 I | embed: listening for peers on http://localhost:2380
+2016-12-28 13:14:45.186834 I | embed: listening for client requests on localhost:2379
+2016-12-28 13:14:45.194974 I | etcdserver: name = my-etcd-1
+2016-12-28 13:14:45.195072 I | etcdserver: data dir = my-etcd-1.etcd
+2016-12-28 13:14:45.195114 I | etcdserver: member dir = my-etcd-1.etcd/member
+2016-12-28 13:14:45.195149 I | etcdserver: heartbeat = 100ms
+2016-12-28 13:14:45.195182 I | etcdserver: election = 1000ms
+2016-12-28 13:14:45.195215 I | etcdserver: snapshot count = 10000
+2016-12-28 13:14:45.195259 I | etcdserver: advertise client URLs = http://localhost:2379
+2016-12-28 13:14:45.195300 I | etcdserver: initial advertise peer URLs = http://localhost:2380
+2016-12-28 13:14:45.195346 I | etcdserver: initial cluster = my-etcd-1=http://localhost:2380
+2016-12-28 13:14:45.444141 I | etcdserver: starting member fd32987dcd0511e0 in cluster 755b248bfe852f6e
+2016-12-28 13:14:45.444257 I | raft: fd32987dcd0511e0 became follower at term 0
+2016-12-28 13:14:45.444310 I | raft: newRaft fd32987dcd0511e0 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+2016-12-28 13:14:45.444348 I | raft: fd32987dcd0511e0 became follower at term 1
+2016-12-28 13:14:45.467273 I | etcdserver: starting server... [version: 3.1.0-rc.1+git, cluster version: to_be_decided]
+2016-12-28 13:14:45.468061 I | etcdserver/membership: added member fd32987dcd0511e0 [http://localhost:2380] to cluster 755b248bfe852f6e
+2016-12-28 13:14:45.745072 I | raft: fd32987dcd0511e0 is starting a new election at term 1
+2016-12-28 13:14:45.745293 I | raft: fd32987dcd0511e0 became candidate at term 2
+2016-12-28 13:14:45.745363 I | raft: fd32987dcd0511e0 received MsgVoteResp from fd32987dcd0511e0 at term 2
+2016-12-28 13:14:45.745427 I | raft: fd32987dcd0511e0 became leader at term 2
+2016-12-28 13:14:45.745473 I | raft: raft.node: fd32987dcd0511e0 elected leader fd32987dcd0511e0 at term 2
+2016-12-28 13:14:45.745886 I | etcdserver: setting up the initial cluster version to 3.1
+2016-12-28 13:14:45.748033 N | etcdserver/membership: set the initial cluster version to 3.1
+2016-12-28 13:14:45.748159 I | etcdserver/api: enabled capabilities for version 3.1
+2016-12-28 13:14:45.748209 I | embed: ready to serve client requests
+2016-12-28 13:14:45.748371 I | etcdserver: published {Name:my-etcd-1 ClientURLs:[http://localhost:2379]} to cluster 755b248bfe852f6e
+2016-12-28 13:14:45.748431 E | etcdmain: forgot to set Type=notify in systemd service file?
+2016-12-28 13:14:45.749664 N | embed: serving insecure client requests on 127.0.0.1:2379, this is strongly discouraged!
+2016-12-28 13:15:42.539762 N | pkg/osutil: received interrupt signal, shutting down...
+2016-12-28 13:15:42.539819 I | etcdserver: skipped leadership transfer for single member cluster
