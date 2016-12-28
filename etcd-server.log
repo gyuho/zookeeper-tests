@@ -1,567 +1,71 @@
-2016-12-21 15:19:18.934034 I | etcdmain: etcd Version: 3.1.0-rc.1+git
-2016-12-21 15:19:18.934101 I | etcdmain: Git SHA: acbf0fa
-2016-12-21 15:19:18.934114 I | etcdmain: Go Version: go1.7.4
-2016-12-21 15:19:18.934125 I | etcdmain: Go OS/Arch: linux/amd64
-2016-12-21 15:19:18.934137 I | etcdmain: setting maximum number of CPUs to 8, total number of available CPUs is 8
-2016-12-21 15:19:18.934149 W | etcdmain: no data-dir provided, using default data-dir ./my-etcd-1.etcd
-2016-12-21 15:19:18.934356 I | embed: listening for peers on http://localhost:2380
-2016-12-21 15:19:18.934409 I | embed: listening for client requests on localhost:2379
-2016-12-21 15:19:18.940503 I | etcdserver: name = my-etcd-1
-2016-12-21 15:19:18.940546 I | etcdserver: data dir = my-etcd-1.etcd
-2016-12-21 15:19:18.940563 I | etcdserver: member dir = my-etcd-1.etcd/member
-2016-12-21 15:19:18.940574 I | etcdserver: heartbeat = 100ms
-2016-12-21 15:19:18.940585 I | etcdserver: election = 1000ms
-2016-12-21 15:19:18.940595 I | etcdserver: snapshot count = 10000
-2016-12-21 15:19:18.940610 I | etcdserver: advertise client URLs = http://localhost:2379
-2016-12-21 15:19:18.940622 I | etcdserver: initial advertise peer URLs = http://localhost:2380
-2016-12-21 15:19:18.940637 I | etcdserver: initial cluster = my-etcd-1=http://localhost:2380
-2016-12-21 15:19:19.181552 I | etcdserver: starting member fd32987dcd0511e0 in cluster 755b248bfe852f6e
-2016-12-21 15:19:19.181663 I | raft: fd32987dcd0511e0 became follower at term 0
-2016-12-21 15:19:19.181727 I | raft: newRaft fd32987dcd0511e0 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
-2016-12-21 15:19:19.181799 I | raft: fd32987dcd0511e0 became follower at term 1
-2016-12-21 15:19:19.207577 I | etcdserver: starting server... [version: 3.1.0-rc.1+git, cluster version: to_be_decided]
-2016-12-21 15:19:19.208163 I | etcdserver/membership: added member fd32987dcd0511e0 [http://localhost:2380] to cluster 755b248bfe852f6e
-2016-12-21 15:19:19.482681 I | raft: fd32987dcd0511e0 is starting a new election at term 1
-2016-12-21 15:19:19.482812 I | raft: fd32987dcd0511e0 became candidate at term 2
-2016-12-21 15:19:19.482898 I | raft: fd32987dcd0511e0 received MsgVoteResp from fd32987dcd0511e0 at term 2
-2016-12-21 15:19:19.482957 I | raft: fd32987dcd0511e0 became leader at term 2
-2016-12-21 15:19:19.483001 I | raft: raft.node: fd32987dcd0511e0 elected leader fd32987dcd0511e0 at term 2
-2016-12-21 15:19:19.483579 I | etcdserver: published {Name:my-etcd-1 ClientURLs:[http://localhost:2379]} to cluster 755b248bfe852f6e
-2016-12-21 15:19:19.483681 I | embed: ready to serve client requests
-2016-12-21 15:19:19.483746 I | etcdserver: setting up the initial cluster version to 3.1
-2016-12-21 15:19:19.483886 E | etcdmain: forgot to set Type=notify in systemd service file?
-2016-12-21 15:19:19.485086 N | embed: serving insecure client requests on 127.0.0.1:2379, this is strongly discouraged!
-2016-12-21 15:19:19.485711 N | etcdserver/membership: set the initial cluster version to 3.1
-2016-12-21 15:19:19.485791 I | etcdserver/api: enabled capabilities for version 3.1
-2016-12-21 15:19:36.505103 I | etcdserver: start to snapshot (applied: 10016, lastsnap: 0)
-2016-12-21 15:19:36.539277 I | etcdserver: saved snapshot at index 10016
-2016-12-21 15:19:36.543058 I | etcdserver: compacted raft log at 5016
-2016-12-21 15:19:37.232055 I | etcdserver: start to snapshot (applied: 20037, lastsnap: 10016)
-2016-12-21 15:19:37.250211 I | etcdserver: saved snapshot at index 20037
-2016-12-21 15:19:37.250484 I | etcdserver: compacted raft log at 15037
-2016-12-21 15:19:38.160164 I | etcdserver: start to snapshot (applied: 30279, lastsnap: 20037)
-2016-12-21 15:19:38.182178 I | etcdserver: saved snapshot at index 30279
-2016-12-21 15:19:38.195189 I | etcdserver: compacted raft log at 25279
-2016-12-21 15:19:38.830407 I | etcdserver: start to snapshot (applied: 40307, lastsnap: 30279)
-2016-12-21 15:19:38.880297 I | etcdserver: saved snapshot at index 40307
-2016-12-21 15:19:38.880608 I | etcdserver: compacted raft log at 35307
-2016-12-21 15:19:39.555893 I | etcdserver: start to snapshot (applied: 50345, lastsnap: 40307)
-2016-12-21 15:19:39.595839 I | etcdserver: saved snapshot at index 50345
-2016-12-21 15:19:39.596191 I | etcdserver: compacted raft log at 45345
-2016-12-21 15:19:40.227709 I | etcdserver: start to snapshot (applied: 60493, lastsnap: 50345)
-2016-12-21 15:19:40.273432 I | etcdserver: saved snapshot at index 60493
-2016-12-21 15:19:40.273624 I | etcdserver: compacted raft log at 55493
-2016-12-21 15:19:40.947080 I | etcdserver: start to snapshot (applied: 70497, lastsnap: 60493)
-2016-12-21 15:19:40.970735 I | etcdserver: saved snapshot at index 70497
-2016-12-21 15:19:40.971357 I | etcdserver: compacted raft log at 65497
-2016-12-21 15:19:41.692625 I | etcdserver: start to snapshot (applied: 80565, lastsnap: 70497)
-2016-12-21 15:19:41.759782 I | etcdserver: saved snapshot at index 80565
-2016-12-21 15:19:41.759988 I | etcdserver: compacted raft log at 75565
-2016-12-21 15:19:42.340126 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000001-0000000000015904.wal is created
-2016-12-21 15:19:42.464965 I | etcdserver: start to snapshot (applied: 90625, lastsnap: 80565)
-2016-12-21 15:19:42.502695 I | etcdserver: saved snapshot at index 90625
-2016-12-21 15:19:42.502911 I | etcdserver: compacted raft log at 85625
-2016-12-21 15:19:43.194413 I | etcdserver: start to snapshot (applied: 100674, lastsnap: 90625)
-2016-12-21 15:19:43.211585 I | etcdserver: saved snapshot at index 100674
-2016-12-21 15:19:43.211868 I | etcdserver: compacted raft log at 95674
-2016-12-21 15:19:43.866148 I | etcdserver: start to snapshot (applied: 110701, lastsnap: 100674)
-2016-12-21 15:19:43.882444 I | etcdserver: saved snapshot at index 110701
-2016-12-21 15:19:43.882763 I | etcdserver: compacted raft log at 105701
-2016-12-21 15:19:44.668572 I | etcdserver: start to snapshot (applied: 120708, lastsnap: 110701)
-2016-12-21 15:19:44.691463 I | etcdserver: saved snapshot at index 120708
-2016-12-21 15:19:44.691711 I | etcdserver: compacted raft log at 115708
-2016-12-21 15:19:45.383013 I | etcdserver: start to snapshot (applied: 130713, lastsnap: 120708)
-2016-12-21 15:19:45.402907 I | etcdserver: saved snapshot at index 130713
-2016-12-21 15:19:45.414456 I | etcdserver: compacted raft log at 125713
-2016-12-21 15:19:46.116286 I | etcdserver: start to snapshot (applied: 140826, lastsnap: 130713)
-2016-12-21 15:19:46.204266 I | etcdserver: saved snapshot at index 140826
-2016-12-21 15:19:46.204502 I | etcdserver: compacted raft log at 135826
-2016-12-21 15:19:46.871983 I | etcdserver: start to snapshot (applied: 150857, lastsnap: 140826)
-2016-12-21 15:19:46.908393 I | etcdserver: saved snapshot at index 150857
-2016-12-21 15:19:46.908616 I | etcdserver: compacted raft log at 145857
-2016-12-21 15:19:47.678923 I | etcdserver: start to snapshot (applied: 160902, lastsnap: 150857)
-2016-12-21 15:19:47.739085 I | etcdserver: saved snapshot at index 160902
-2016-12-21 15:19:47.739881 I | etcdserver: compacted raft log at 155902
-2016-12-21 15:19:48.386920 I | etcdserver: start to snapshot (applied: 170952, lastsnap: 160902)
-2016-12-21 15:19:48.458292 I | etcdserver: saved snapshot at index 170952
-2016-12-21 15:19:48.458568 I | etcdserver: compacted raft log at 165952
-2016-12-21 15:19:48.698015 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000002-000000000002ab6b.wal is created
-2016-12-21 15:19:49.010971 I | etcdserver: start to snapshot (applied: 181244, lastsnap: 170952)
-2016-12-21 15:19:49.047492 I | etcdserver: saved snapshot at index 181244
-2016-12-21 15:19:49.047864 I | etcdserver: compacted raft log at 176244
-2016-12-21 15:19:49.223914 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000002720.snap successfully
-2016-12-21 15:19:49.224011 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000004e45.snap successfully
-2016-12-21 15:19:49.224075 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000007647.snap successfully
-2016-12-21 15:19:49.224138 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000009d73.snap successfully
-2016-12-21 15:19:49.224211 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000000c4a9.snap successfully
-2016-12-21 15:19:49.224268 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000000ec4d.snap successfully
-2016-12-21 15:19:49.224327 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000011361.snap successfully
-2016-12-21 15:19:49.224382 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000013ab5.snap successfully
-2016-12-21 15:19:49.224438 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000016201.snap successfully
-2016-12-21 15:19:49.224493 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000018942.snap successfully
-2016-12-21 15:19:49.224548 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000001b06d.snap successfully
-2016-12-21 15:19:49.224604 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000001d784.snap successfully
-2016-12-21 15:19:49.224662 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000001fe99.snap successfully
-2016-12-21 15:19:49.769780 I | etcdserver: start to snapshot (applied: 191255, lastsnap: 181244)
-2016-12-21 15:19:49.818632 I | etcdserver: saved snapshot at index 191255
-2016-12-21 15:19:49.818825 I | etcdserver: compacted raft log at 186255
-2016-12-21 15:19:50.351824 I | etcdserver: start to snapshot (applied: 201305, lastsnap: 191255)
-2016-12-21 15:19:50.376637 I | etcdserver: saved snapshot at index 201305
-2016-12-21 15:19:50.376840 I | etcdserver: compacted raft log at 196305
-2016-12-21 15:19:51.027579 I | etcdserver: start to snapshot (applied: 211858, lastsnap: 201305)
-2016-12-21 15:19:51.084055 I | etcdserver: saved snapshot at index 211858
-2016-12-21 15:19:51.115810 I | etcdserver: compacted raft log at 206858
-2016-12-21 15:19:51.780535 I | etcdserver: start to snapshot (applied: 221976, lastsnap: 211858)
-2016-12-21 15:19:51.818290 I | etcdserver: saved snapshot at index 221976
-2016-12-21 15:19:51.837851 I | etcdserver: compacted raft log at 216976
-2016-12-21 15:19:52.375002 I | etcdserver: start to snapshot (applied: 232170, lastsnap: 221976)
-2016-12-21 15:19:52.388913 I | etcdserver: saved snapshot at index 232170
-2016-12-21 15:19:52.391022 I | etcdserver: compacted raft log at 227170
-2016-12-21 15:19:53.069350 I | etcdserver: start to snapshot (applied: 242250, lastsnap: 232170)
-2016-12-21 15:19:53.094299 I | etcdserver: saved snapshot at index 242250
-2016-12-21 15:19:53.094559 I | etcdserver: compacted raft log at 237250
-2016-12-21 15:19:53.689796 I | etcdserver: start to snapshot (applied: 252307, lastsnap: 242250)
-2016-12-21 15:19:53.708531 I | etcdserver: saved snapshot at index 252307
-2016-12-21 15:19:53.713450 I | etcdserver: compacted raft log at 247307
-2016-12-21 15:19:54.328957 I | etcdserver: start to snapshot (applied: 262324, lastsnap: 252307)
-2016-12-21 15:19:54.368767 I | etcdserver: saved snapshot at index 262324
-2016-12-21 15:19:54.373196 I | etcdserver: compacted raft log at 257324
-2016-12-21 15:19:54.649390 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000003-0000000000040945.wal is created
-2016-12-21 15:19:54.973481 I | etcdserver: start to snapshot (applied: 272454, lastsnap: 262324)
-2016-12-21 15:19:54.987276 I | etcdserver: saved snapshot at index 272454
-2016-12-21 15:19:54.987469 I | etcdserver: compacted raft log at 267454
-2016-12-21 15:19:55.730279 I | etcdserver: start to snapshot (applied: 282458, lastsnap: 272454)
-2016-12-21 15:19:55.762291 I | etcdserver: saved snapshot at index 282458
-2016-12-21 15:19:55.762627 I | etcdserver: compacted raft log at 277458
-2016-12-21 15:19:56.436606 I | etcdserver: start to snapshot (applied: 292549, lastsnap: 282458)
-2016-12-21 15:19:56.494577 I | etcdserver: saved snapshot at index 292549
-2016-12-21 15:19:56.494815 I | etcdserver: compacted raft log at 287549
-2016-12-21 15:19:56.986535 I | etcdserver: start to snapshot (applied: 302563, lastsnap: 292549)
-2016-12-21 15:19:57.020216 I | etcdserver: saved snapshot at index 302563
-2016-12-21 15:19:57.020425 I | etcdserver: compacted raft log at 297563
-2016-12-21 15:19:57.738170 I | etcdserver: start to snapshot (applied: 312782, lastsnap: 302563)
-2016-12-21 15:19:57.788857 I | etcdserver: saved snapshot at index 312782
-2016-12-21 15:19:57.789086 I | etcdserver: compacted raft log at 307782
-2016-12-21 15:19:58.412293 I | etcdserver: start to snapshot (applied: 322795, lastsnap: 312782)
-2016-12-21 15:19:58.437142 I | etcdserver: saved snapshot at index 322795
-2016-12-21 15:19:58.437351 I | etcdserver: compacted raft log at 317795
-2016-12-21 15:19:59.063572 I | etcdserver: start to snapshot (applied: 332811, lastsnap: 322795)
-2016-12-21 15:19:59.083867 I | etcdserver: saved snapshot at index 332811
-2016-12-21 15:19:59.084078 I | etcdserver: compacted raft log at 327811
-2016-12-21 15:19:59.759149 I | etcdserver: start to snapshot (applied: 342844, lastsnap: 332811)
-2016-12-21 15:19:59.784159 I | etcdserver: saved snapshot at index 342844
-2016-12-21 15:19:59.784365 I | etcdserver: compacted raft log at 337844
-2016-12-21 15:20:00.370818 I | etcdserver: start to snapshot (applied: 352870, lastsnap: 342844)
-2016-12-21 15:20:00.385988 I | etcdserver: saved snapshot at index 352870
-2016-12-21 15:20:00.386159 I | etcdserver: compacted raft log at 347870
-2016-12-21 15:20:00.520026 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000004-0000000000056739.wal is created
-2016-12-21 15:20:00.992438 I | etcdserver: start to snapshot (applied: 362877, lastsnap: 352870)
-2016-12-21 15:20:01.024513 I | etcdserver: saved snapshot at index 362877
-2016-12-21 15:20:01.024758 I | etcdserver: compacted raft log at 357877
-2016-12-21 15:20:01.723195 I | etcdserver: start to snapshot (applied: 372882, lastsnap: 362877)
-2016-12-21 15:20:01.738233 I | etcdserver: saved snapshot at index 372882
-2016-12-21 15:20:01.738460 I | etcdserver: compacted raft log at 367882
-2016-12-21 15:20:02.379468 I | etcdserver: start to snapshot (applied: 383153, lastsnap: 372882)
-2016-12-21 15:20:02.399046 I | etcdserver: saved snapshot at index 383153
-2016-12-21 15:20:02.399270 I | etcdserver: compacted raft log at 378153
-2016-12-21 15:20:03.042582 I | etcdserver: start to snapshot (applied: 393210, lastsnap: 383153)
-2016-12-21 15:20:03.064432 I | etcdserver: saved snapshot at index 393210
-2016-12-21 15:20:03.064760 I | etcdserver: compacted raft log at 388210
-2016-12-21 15:20:03.678041 I | etcdserver: start to snapshot (applied: 403235, lastsnap: 393210)
-2016-12-21 15:20:03.696944 I | etcdserver: saved snapshot at index 403235
-2016-12-21 15:20:03.697100 I | etcdserver: compacted raft log at 398235
-2016-12-21 15:20:04.413574 I | etcdserver: start to snapshot (applied: 413248, lastsnap: 403235)
-2016-12-21 15:20:04.444783 I | etcdserver: saved snapshot at index 413248
-2016-12-21 15:20:04.445016 I | etcdserver: compacted raft log at 408248
-2016-12-21 15:20:05.021478 I | etcdserver: start to snapshot (applied: 423342, lastsnap: 413248)
-2016-12-21 15:20:05.042486 I | etcdserver: saved snapshot at index 423342
-2016-12-21 15:20:05.042711 I | etcdserver: compacted raft log at 418342
-2016-12-21 15:20:05.655122 I | etcdserver: start to snapshot (applied: 433347, lastsnap: 423342)
-2016-12-21 15:20:05.749440 I | etcdserver: saved snapshot at index 433347
-2016-12-21 15:20:05.749683 I | etcdserver: compacted raft log at 428347
-2016-12-21 15:20:06.304910 I | etcdserver: start to snapshot (applied: 443389, lastsnap: 433347)
-2016-12-21 15:20:06.403817 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000005-000000000006c671.wal is created
-2016-12-21 15:20:06.427762 I | etcdserver: saved snapshot at index 443389
-2016-12-21 15:20:06.428691 I | etcdserver: compacted raft log at 438389
-2016-12-21 15:20:07.058011 I | etcdserver: start to snapshot (applied: 453428, lastsnap: 443389)
-2016-12-21 15:20:07.096030 I | etcdserver: saved snapshot at index 453428
-2016-12-21 15:20:07.096259 I | etcdserver: compacted raft log at 448428
-2016-12-21 15:20:07.752379 I | etcdserver: start to snapshot (applied: 463592, lastsnap: 453428)
-2016-12-21 15:20:07.772757 I | etcdserver: saved snapshot at index 463592
-2016-12-21 15:20:07.772956 I | etcdserver: compacted raft log at 458592
-2016-12-21 15:20:08.465057 I | etcdserver: start to snapshot (applied: 473610, lastsnap: 463592)
-2016-12-21 15:20:08.506974 I | etcdserver: saved snapshot at index 473610
-2016-12-21 15:20:08.507225 I | etcdserver: compacted raft log at 468610
-2016-12-21 15:20:09.068439 I | etcdserver: start to snapshot (applied: 483630, lastsnap: 473610)
-2016-12-21 15:20:09.089648 I | etcdserver: saved snapshot at index 483630
-2016-12-21 15:20:09.089928 I | etcdserver: compacted raft log at 478630
-2016-12-21 15:20:09.641553 I | etcdserver: start to snapshot (applied: 493655, lastsnap: 483630)
-2016-12-21 15:20:09.658197 I | etcdserver: saved snapshot at index 493655
-2016-12-21 15:20:09.658387 I | etcdserver: compacted raft log at 488655
-2016-12-21 15:20:10.308636 I | etcdserver: start to snapshot (applied: 503663, lastsnap: 493655)
-2016-12-21 15:20:10.326055 I | etcdserver: saved snapshot at index 503663
-2016-12-21 15:20:10.326283 I | etcdserver: compacted raft log at 498663
-2016-12-21 15:20:11.080984 I | etcdserver: start to snapshot (applied: 514018, lastsnap: 503663)
-2016-12-21 15:20:11.142245 I | etcdserver: saved snapshot at index 514018
-2016-12-21 15:20:11.142541 I | etcdserver: compacted raft log at 509018
-2016-12-21 15:20:11.568099 I | etcdserver: start to snapshot (applied: 524045, lastsnap: 514018)
-2016-12-21 15:20:11.599744 I | etcdserver: saved snapshot at index 524045
-2016-12-21 15:20:11.600028 I | etcdserver: compacted raft log at 519045
-2016-12-21 15:20:12.492865 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000006-0000000000082595.wal is created
-2016-12-21 15:20:12.534349 I | etcdserver: start to snapshot (applied: 535402, lastsnap: 524045)
-2016-12-21 15:20:12.562302 I | etcdserver: saved snapshot at index 535402
-2016-12-21 15:20:12.562571 I | etcdserver: compacted raft log at 530402
-2016-12-21 15:20:13.185843 I | etcdserver: start to snapshot (applied: 545438, lastsnap: 535402)
-2016-12-21 15:20:13.283627 I | etcdserver: saved snapshot at index 545438
-2016-12-21 15:20:13.286478 I | etcdserver: compacted raft log at 540438
-2016-12-21 15:20:13.844515 I | etcdserver: start to snapshot (applied: 555454, lastsnap: 545438)
-2016-12-21 15:20:13.886056 I | etcdserver: saved snapshot at index 555454
-2016-12-21 15:20:13.886816 I | etcdserver: compacted raft log at 550454
-2016-12-21 15:20:14.430862 I | etcdserver: start to snapshot (applied: 565464, lastsnap: 555454)
-2016-12-21 15:20:14.516827 I | etcdserver: saved snapshot at index 565464
-2016-12-21 15:20:14.517072 I | etcdserver: compacted raft log at 560464
-2016-12-21 15:20:15.295048 I | etcdserver: start to snapshot (applied: 575609, lastsnap: 565464)
-2016-12-21 15:20:15.352728 I | etcdserver: saved snapshot at index 575609
-2016-12-21 15:20:15.353127 I | etcdserver: compacted raft log at 570609
-2016-12-21 15:20:15.863365 I | etcdserver: start to snapshot (applied: 585718, lastsnap: 575609)
-2016-12-21 15:20:15.942529 I | etcdserver: saved snapshot at index 585718
-2016-12-21 15:20:15.942871 I | etcdserver: compacted raft log at 580718
-2016-12-21 15:20:16.665730 I | etcdserver: start to snapshot (applied: 595732, lastsnap: 585718)
-2016-12-21 15:20:16.684522 I | etcdserver: saved snapshot at index 595732
-2016-12-21 15:20:16.684722 I | etcdserver: compacted raft log at 590732
-2016-12-21 15:20:17.291444 I | etcdserver: start to snapshot (applied: 605803, lastsnap: 595732)
-2016-12-21 15:20:17.315354 I | etcdserver: saved snapshot at index 605803
-2016-12-21 15:20:17.315706 I | etcdserver: compacted raft log at 600803
-2016-12-21 15:20:17.855508 I | etcdserver: start to snapshot (applied: 615843, lastsnap: 605803)
-2016-12-21 15:20:17.878689 I | etcdserver: saved snapshot at index 615843
-2016-12-21 15:20:17.878893 I | etcdserver: compacted raft log at 610843
-2016-12-21 15:20:18.453693 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000007-00000000000982cb.wal is created
-2016-12-21 15:20:18.680962 I | etcdserver: start to snapshot (applied: 626437, lastsnap: 615843)
-2016-12-21 15:20:18.702241 I | etcdserver: saved snapshot at index 626437
-2016-12-21 15:20:18.702528 I | etcdserver: compacted raft log at 621437
-2016-12-21 15:20:19.266540 I | pkg/fileutil: purged file my-etcd-1.etcd/member/wal/0000000000000000-0000000000000000.wal successfully
-2016-12-21 15:20:19.266917 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000002261a.snap successfully
-2016-12-21 15:20:19.267006 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000024d49.snap successfully
-2016-12-21 15:20:19.267067 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000027486.snap successfully
-2016-12-21 15:20:19.267128 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000029bc8.snap successfully
-2016-12-21 15:20:19.267192 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000002c3fc.snap successfully
-2016-12-21 15:20:19.267248 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000002eb17.snap successfully
-2016-12-21 15:20:19.267306 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000031259.snap successfully
-2016-12-21 15:20:19.267367 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000033b92.snap successfully
-2016-12-21 15:20:19.267426 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000036318.snap successfully
-2016-12-21 15:20:19.267498 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000038aea.snap successfully
-2016-12-21 15:20:19.267557 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000003b24a.snap successfully
-2016-12-21 15:20:19.267629 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000003d993.snap successfully
-2016-12-21 15:20:19.267700 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000400b4.snap successfully
-2016-12-21 15:20:19.267762 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000042846.snap successfully
-2016-12-21 15:20:19.267835 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000044f5a.snap successfully
-2016-12-21 15:20:19.267911 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000476c5.snap successfully
-2016-12-21 15:20:19.267973 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000049de3.snap successfully
-2016-12-21 15:20:19.268037 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000004c5ce.snap successfully
-2016-12-21 15:20:19.268095 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000004eceb.snap successfully
-2016-12-21 15:20:19.268154 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000005140b.snap successfully
-2016-12-21 15:20:19.268229 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000053b3c.snap successfully
-2016-12-21 15:20:19.268286 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000056266.snap successfully
-2016-12-21 15:20:19.268342 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000005897d.snap successfully
-2016-12-21 15:20:19.268408 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000005b092.snap successfully
-2016-12-21 15:20:19.268471 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000005d8b1.snap successfully
-2016-12-21 15:20:19.268539 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000005fffa.snap successfully
-2016-12-21 15:20:19.268614 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000062723.snap successfully
-2016-12-21 15:20:19.268689 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000064e40.snap successfully
-2016-12-21 15:20:19.268745 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000675ae.snap successfully
-2016-12-21 15:20:19.268810 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000069cc3.snap successfully
-2016-12-21 15:20:19.268870 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000006c3fd.snap successfully
-2016-12-21 15:20:19.268927 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000006eb34.snap successfully
-2016-12-21 15:20:19.268990 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000712e8.snap successfully
-2016-12-21 15:20:19.269056 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000073a0a.snap successfully
-2016-12-21 15:20:19.269114 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000007612e.snap successfully
-2016-12-21 15:20:19.269176 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000078857.snap successfully
-2016-12-21 15:20:19.269242 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000007af6f.snap successfully
-2016-12-21 15:20:19.269306 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000007d7e2.snap successfully
-2016-12-21 15:20:19.269368 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000007ff0d.snap successfully
-2016-12-21 15:20:19.269428 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000082b6a.snap successfully
-2016-12-21 15:20:19.269489 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000008529e.snap successfully
-2016-12-21 15:20:19.269552 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000879be.snap successfully
-2016-12-21 15:20:19.269610 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000008a0d8.snap successfully
-2016-12-21 15:20:19.269674 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000008c879.snap successfully
-2016-12-21 15:20:19.309027 I | pkg/fileutil: purged file my-etcd-1.etcd/member/wal/0000000000000001-0000000000015904.wal successfully
-2016-12-21 15:20:19.322555 I | pkg/fileutil: purged file my-etcd-1.etcd/member/wal/0000000000000002-000000000002ab6b.wal successfully
-2016-12-21 15:20:19.784849 I | etcdserver: start to snapshot (applied: 636812, lastsnap: 626437)
-2016-12-21 15:20:19.810850 I | etcdserver: saved snapshot at index 636812
-2016-12-21 15:20:19.833565 I | etcdserver: compacted raft log at 631812
-2016-12-21 15:20:20.347409 I | etcdserver: start to snapshot (applied: 646844, lastsnap: 636812)
-2016-12-21 15:20:20.369331 I | etcdserver: saved snapshot at index 646844
-2016-12-21 15:20:20.369540 I | etcdserver: compacted raft log at 641844
-2016-12-21 15:20:20.933610 I | etcdserver: start to snapshot (applied: 656859, lastsnap: 646844)
-2016-12-21 15:20:20.957153 I | etcdserver: saved snapshot at index 656859
-2016-12-21 15:20:20.957350 I | etcdserver: compacted raft log at 651859
-2016-12-21 15:20:21.732971 I | etcdserver: start to snapshot (applied: 667076, lastsnap: 656859)
-2016-12-21 15:20:21.764128 I | etcdserver: saved snapshot at index 667076
-2016-12-21 15:20:21.764356 I | etcdserver: compacted raft log at 662076
-2016-12-21 15:20:22.214873 I | etcdserver: start to snapshot (applied: 677155, lastsnap: 667076)
-2016-12-21 15:20:22.272953 I | etcdserver: saved snapshot at index 677155
-2016-12-21 15:20:22.273243 I | etcdserver: compacted raft log at 672155
-2016-12-21 15:20:23.154342 I | etcdserver: start to snapshot (applied: 687323, lastsnap: 677155)
-2016-12-21 15:20:23.184474 I | etcdserver: saved snapshot at index 687323
-2016-12-21 15:20:23.184764 I | etcdserver: compacted raft log at 682323
-2016-12-21 15:20:23.673373 I | etcdserver: start to snapshot (applied: 697479, lastsnap: 687323)
-2016-12-21 15:20:23.689291 I | etcdserver: saved snapshot at index 697479
-2016-12-21 15:20:23.689508 I | etcdserver: compacted raft log at 692479
-2016-12-21 15:20:24.589576 I | etcdserver: start to snapshot (applied: 707567, lastsnap: 697479)
-2016-12-21 15:20:24.702536 I | etcdserver: saved snapshot at index 707567
-2016-12-21 15:20:24.703056 I | etcdserver: compacted raft log at 702567
-2016-12-21 15:20:24.954691 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000008-00000000000ae10b.wal is created
-2016-12-21 15:20:25.253346 I | etcdserver: start to snapshot (applied: 717707, lastsnap: 707567)
-2016-12-21 15:20:25.271843 I | etcdserver: saved snapshot at index 717707
-2016-12-21 15:20:25.272081 I | etcdserver: compacted raft log at 712707
-2016-12-21 15:20:26.131714 I | etcdserver: start to snapshot (applied: 727722, lastsnap: 717707)
-2016-12-21 15:20:26.147769 I | etcdserver: saved snapshot at index 727722
-2016-12-21 15:20:26.147956 I | etcdserver: compacted raft log at 722722
-2016-12-21 15:20:26.808530 I | etcdserver: start to snapshot (applied: 737767, lastsnap: 727722)
-2016-12-21 15:20:26.863033 I | etcdserver: saved snapshot at index 737767
-2016-12-21 15:20:26.863310 I | etcdserver: compacted raft log at 732767
-2016-12-21 15:20:27.597940 I | etcdserver: start to snapshot (applied: 747830, lastsnap: 737767)
-2016-12-21 15:20:27.631027 I | etcdserver: saved snapshot at index 747830
-2016-12-21 15:20:27.631350 I | etcdserver: compacted raft log at 742830
-2016-12-21 15:20:28.145315 I | etcdserver: start to snapshot (applied: 757889, lastsnap: 747830)
-2016-12-21 15:20:28.177892 I | etcdserver: saved snapshot at index 757889
-2016-12-21 15:20:28.178180 I | etcdserver: compacted raft log at 752889
-2016-12-21 15:20:28.926463 I | etcdserver: start to snapshot (applied: 767890, lastsnap: 757889)
-2016-12-21 15:20:28.949019 I | etcdserver: saved snapshot at index 767890
-2016-12-21 15:20:28.949181 I | etcdserver: compacted raft log at 762890
-2016-12-21 15:20:29.519942 I | etcdserver: start to snapshot (applied: 778085, lastsnap: 767890)
-2016-12-21 15:20:29.535625 I | etcdserver: saved snapshot at index 778085
-2016-12-21 15:20:29.535842 I | etcdserver: compacted raft log at 773085
-2016-12-21 15:20:30.248840 I | etcdserver: start to snapshot (applied: 788156, lastsnap: 778085)
-2016-12-21 15:20:30.309768 I | etcdserver: saved snapshot at index 788156
-2016-12-21 15:20:30.390665 I | etcdserver: compacted raft log at 783156
-2016-12-21 15:20:31.024267 I | etcdserver: start to snapshot (applied: 798216, lastsnap: 788156)
-2016-12-21 15:20:31.062834 I | etcdserver: saved snapshot at index 798216
-2016-12-21 15:20:31.148348 I | etcdserver: compacted raft log at 793216
-2016-12-21 15:20:31.396593 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000009-00000000000c3d26.wal is created
-2016-12-21 15:20:31.871545 I | etcdserver: start to snapshot (applied: 808321, lastsnap: 798216)
-2016-12-21 15:20:31.919221 I | etcdserver: saved snapshot at index 808321
-2016-12-21 15:20:31.968167 I | etcdserver: compacted raft log at 803321
-2016-12-21 15:20:32.575027 I | etcdserver: start to snapshot (applied: 818327, lastsnap: 808321)
-2016-12-21 15:20:32.621982 I | etcdserver: saved snapshot at index 818327
-2016-12-21 15:20:32.652930 I | etcdserver: compacted raft log at 813327
-2016-12-21 15:20:33.362316 I | etcdserver: start to snapshot (applied: 828356, lastsnap: 818327)
-2016-12-21 15:20:33.375777 I | etcdserver: saved snapshot at index 828356
-2016-12-21 15:20:33.375941 I | etcdserver: compacted raft log at 823356
-2016-12-21 15:20:34.182043 I | etcdserver: start to snapshot (applied: 838410, lastsnap: 828356)
-2016-12-21 15:20:34.224235 I | etcdserver: saved snapshot at index 838410
-2016-12-21 15:20:34.224561 I | etcdserver: compacted raft log at 833410
-2016-12-21 15:20:34.745729 I | etcdserver: start to snapshot (applied: 848424, lastsnap: 838410)
-2016-12-21 15:20:34.774260 I | etcdserver: saved snapshot at index 848424
-2016-12-21 15:20:34.774510 I | etcdserver: compacted raft log at 843424
-2016-12-21 15:20:35.812600 I | etcdserver: start to snapshot (applied: 858823, lastsnap: 848424)
-2016-12-21 15:20:35.849555 I | etcdserver: saved snapshot at index 858823
-2016-12-21 15:20:35.850312 I | etcdserver: compacted raft log at 853823
-2016-12-21 15:20:36.396694 I | etcdserver: start to snapshot (applied: 868858, lastsnap: 858823)
-2016-12-21 15:20:36.443860 I | etcdserver: saved snapshot at index 868858
-2016-12-21 15:20:36.444122 I | etcdserver: compacted raft log at 863858
-2016-12-21 15:20:37.207650 I | etcdserver: start to snapshot (applied: 878999, lastsnap: 868858)
-2016-12-21 15:20:37.232340 I | etcdserver: saved snapshot at index 878999
-2016-12-21 15:20:37.232536 I | etcdserver: compacted raft log at 873999
-2016-12-21 15:20:37.976167 I | etcdserver: start to snapshot (applied: 889093, lastsnap: 878999)
-2016-12-21 15:20:38.007464 I | etcdserver: saved snapshot at index 889093
-2016-12-21 15:20:38.007722 I | etcdserver: compacted raft log at 884093
-2016-12-21 15:20:38.178406 I | wal: segmented wal file my-etcd-1.etcd/member/wal/000000000000000a-00000000000d9ae3.wal is created
-2016-12-21 15:20:38.728397 I | etcdserver: start to snapshot (applied: 899190, lastsnap: 889093)
-2016-12-21 15:20:38.758301 I | etcdserver: saved snapshot at index 899190
-2016-12-21 15:20:38.758514 I | etcdserver: compacted raft log at 894190
-2016-12-21 15:20:39.437481 I | etcdserver: start to snapshot (applied: 909254, lastsnap: 899190)
-2016-12-21 15:20:39.478830 I | etcdserver: saved snapshot at index 909254
-2016-12-21 15:20:39.528441 I | etcdserver: compacted raft log at 904254
-2016-12-21 15:20:40.155802 I | etcdserver: start to snapshot (applied: 919270, lastsnap: 909254)
-2016-12-21 15:20:40.178207 I | etcdserver: saved snapshot at index 919270
-2016-12-21 15:20:40.250737 I | etcdserver: compacted raft log at 914270
-2016-12-21 15:20:41.006504 I | etcdserver: start to snapshot (applied: 929558, lastsnap: 919270)
-2016-12-21 15:20:41.033821 I | etcdserver: saved snapshot at index 929558
-2016-12-21 15:20:41.034098 I | etcdserver: compacted raft log at 924558
-2016-12-21 15:20:41.865655 I | etcdserver: start to snapshot (applied: 939574, lastsnap: 929558)
-2016-12-21 15:20:41.894398 I | etcdserver: saved snapshot at index 939574
-2016-12-21 15:20:41.894606 I | etcdserver: compacted raft log at 934574
-2016-12-21 15:20:42.555874 I | etcdserver: start to snapshot (applied: 949588, lastsnap: 939574)
-2016-12-21 15:20:42.584878 I | etcdserver: saved snapshot at index 949588
-2016-12-21 15:20:42.585114 I | etcdserver: compacted raft log at 944588
-2016-12-21 15:20:43.181967 I | etcdserver: start to snapshot (applied: 959668, lastsnap: 949588)
-2016-12-21 15:20:43.205049 I | etcdserver: saved snapshot at index 959668
-2016-12-21 15:20:43.205267 I | etcdserver: compacted raft log at 954668
-2016-12-21 15:20:44.234895 I | etcdserver: start to snapshot (applied: 969859, lastsnap: 959668)
-2016-12-21 15:20:44.258543 I | etcdserver: saved snapshot at index 969859
-2016-12-21 15:20:44.258925 I | etcdserver: compacted raft log at 964859
-2016-12-21 15:20:44.852769 I | wal: segmented wal file my-etcd-1.etcd/member/wal/000000000000000b-00000000000ef887.wal is created
-2016-12-21 15:20:44.896119 I | etcdserver: start to snapshot (applied: 979924, lastsnap: 969859)
-2016-12-21 15:20:44.924969 I | etcdserver: saved snapshot at index 979924
-2016-12-21 15:20:44.925441 I | etcdserver: compacted raft log at 974924
-2016-12-21 15:20:45.438211 I | etcdserver: start to snapshot (applied: 989944, lastsnap: 979924)
-2016-12-21 15:20:45.479894 I | etcdserver: saved snapshot at index 989944
-2016-12-21 15:20:45.480192 I | etcdserver: compacted raft log at 984944
-2016-12-21 15:20:46.423521 I | etcdserver: start to snapshot (applied: 1000311, lastsnap: 989944)
-2016-12-21 15:20:46.440621 I | etcdserver: saved snapshot at index 1000311
-2016-12-21 15:20:46.440902 I | etcdserver: compacted raft log at 995311
-2016-12-21 15:20:47.049169 I | etcdserver: start to snapshot (applied: 1010533, lastsnap: 1000311)
-2016-12-21 15:20:47.149291 I | etcdserver: saved snapshot at index 1010533
-2016-12-21 15:20:47.149594 I | etcdserver: compacted raft log at 1005533
-2016-12-21 15:20:47.933845 I | etcdserver: start to snapshot (applied: 1020560, lastsnap: 1010533)
-2016-12-21 15:20:47.962543 I | etcdserver: saved snapshot at index 1020560
-2016-12-21 15:20:47.962753 I | etcdserver: compacted raft log at 1015560
-2016-12-21 15:20:48.608393 I | etcdserver: start to snapshot (applied: 1030723, lastsnap: 1020560)
-2016-12-21 15:20:48.652135 I | etcdserver: saved snapshot at index 1030723
-2016-12-21 15:20:48.685001 I | etcdserver: compacted raft log at 1025723
-2016-12-21 15:20:49.271479 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000008eff6.snap successfully
-2016-12-21 15:20:49.271648 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000091714.snap successfully
-2016-12-21 15:20:49.271774 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000093e6b.snap successfully
-2016-12-21 15:20:49.271899 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000965a3.snap successfully
-2016-12-21 15:20:49.272018 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000098f05.snap successfully
-2016-12-21 15:20:49.272086 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000009b78c.snap successfully
-2016-12-21 15:20:49.272203 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000009debc.snap successfully
-2016-12-21 15:20:49.272347 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000a05db.snap successfully
-2016-12-21 15:20:49.272467 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000a2dc4.snap successfully
-2016-12-21 15:20:49.272857 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000a5523.snap successfully
-2016-12-21 15:20:49.273153 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000a7cdb.snap successfully
-2016-12-21 15:20:49.273395 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000aa487.snap successfully
-2016-12-21 15:20:49.273684 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000acbef.snap successfully
-2016-12-21 15:20:49.273943 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000af38b.snap successfully
-2016-12-21 15:20:49.274421 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000b1aaa.snap successfully
-2016-12-21 15:20:49.274521 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000b41e7.snap successfully
-2016-12-21 15:20:49.274588 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000b6936.snap successfully
-2016-12-21 15:20:49.274652 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000b9081.snap successfully
-2016-12-21 15:20:49.274749 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000bb792.snap successfully
-2016-12-21 15:20:49.275005 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000bdf65.snap successfully
-2016-12-21 15:20:49.276080 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000c06bc.snap successfully
-2016-12-21 15:20:49.276168 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000c2e08.snap successfully
-2016-12-21 15:20:49.276231 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000c5581.snap successfully
-2016-12-21 15:20:49.276293 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000c7c97.snap successfully
-2016-12-21 15:20:49.276378 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000ca3c4.snap successfully
-2016-12-21 15:20:49.276447 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000ccb0a.snap successfully
-2016-12-21 15:20:49.276530 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000cf228.snap successfully
-2016-12-21 15:20:49.276613 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000d1ac7.snap successfully
-2016-12-21 15:20:49.276672 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000d41fa.snap successfully
-2016-12-21 15:20:49.276771 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000d6997.snap successfully
-2016-12-21 15:20:49.276833 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000d9105.snap successfully
-2016-12-21 15:20:49.276892 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000db876.snap successfully
-2016-12-21 15:20:49.276951 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000ddfc6.snap successfully
-2016-12-21 15:20:49.277375 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000e06e6.snap successfully
-2016-12-21 15:20:49.277481 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000e2f16.snap successfully
-2016-12-21 15:20:49.277544 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000e5636.snap successfully
-2016-12-21 15:20:49.277608 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000e7d54.snap successfully
-2016-12-21 15:20:49.277668 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000ea4b4.snap successfully
-2016-12-21 15:20:49.279392 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000ecc83.snap successfully
-2016-12-21 15:20:49.279496 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000ef3d4.snap successfully
-2016-12-21 15:20:49.346803 I | pkg/fileutil: purged file my-etcd-1.etcd/member/wal/0000000000000003-0000000000040945.wal successfully
-2016-12-21 15:20:49.367992 I | pkg/fileutil: purged file my-etcd-1.etcd/member/wal/0000000000000004-0000000000056739.wal successfully
-2016-12-21 15:20:49.388541 I | pkg/fileutil: purged file my-etcd-1.etcd/member/wal/0000000000000005-000000000006c671.wal successfully
-2016-12-21 15:20:49.403005 I | pkg/fileutil: purged file my-etcd-1.etcd/member/wal/0000000000000006-0000000000082595.wal successfully
-2016-12-21 15:20:49.555798 I | etcdserver: start to snapshot (applied: 1040805, lastsnap: 1030723)
-2016-12-21 15:20:49.581128 I | etcdserver: saved snapshot at index 1040805
-2016-12-21 15:20:49.581387 I | etcdserver: compacted raft log at 1035805
-2016-12-21 15:20:50.208284 I | etcdserver: start to snapshot (applied: 1050845, lastsnap: 1040805)
-2016-12-21 15:20:50.244784 I | etcdserver: saved snapshot at index 1050845
-2016-12-21 15:20:50.244998 I | etcdserver: compacted raft log at 1045845
-2016-12-21 15:20:50.920408 I | etcdserver: start to snapshot (applied: 1060976, lastsnap: 1050845)
-2016-12-21 15:20:51.044656 I | etcdserver: saved snapshot at index 1060976
-2016-12-21 15:20:51.044925 I | etcdserver: compacted raft log at 1055976
-2016-12-21 15:20:51.642391 I | wal: segmented wal file my-etcd-1.etcd/member/wal/000000000000000c-0000000000105477.wal is created
-2016-12-21 15:20:51.755421 I | etcdserver: start to snapshot (applied: 1070989, lastsnap: 1060976)
-2016-12-21 15:20:51.785757 I | etcdserver: saved snapshot at index 1070989
-2016-12-21 15:20:51.785989 I | etcdserver: compacted raft log at 1065989
-2016-12-21 15:20:52.625464 I | etcdserver: start to snapshot (applied: 1081102, lastsnap: 1070989)
-2016-12-21 15:20:52.654266 I | etcdserver: saved snapshot at index 1081102
-2016-12-21 15:20:52.654474 I | etcdserver: compacted raft log at 1076102
-2016-12-21 15:20:53.619045 I | etcdserver: start to snapshot (applied: 1091131, lastsnap: 1081102)
-2016-12-21 15:20:53.658924 I | etcdserver: saved snapshot at index 1091131
-2016-12-21 15:20:53.659185 I | etcdserver: compacted raft log at 1086131
-2016-12-21 15:20:54.196196 I | etcdserver: start to snapshot (applied: 1101162, lastsnap: 1091131)
-2016-12-21 15:20:54.238108 I | etcdserver: saved snapshot at index 1101162
-2016-12-21 15:20:54.238345 I | etcdserver: compacted raft log at 1096162
-2016-12-21 15:20:55.221857 I | etcdserver: start to snapshot (applied: 1111217, lastsnap: 1101162)
-2016-12-21 15:20:55.255106 I | etcdserver: saved snapshot at index 1111217
-2016-12-21 15:20:55.255301 I | etcdserver: compacted raft log at 1106217
-2016-12-21 15:20:55.977774 I | etcdserver: start to snapshot (applied: 1121375, lastsnap: 1111217)
-2016-12-21 15:20:56.020956 I | etcdserver: saved snapshot at index 1121375
-2016-12-21 15:20:56.021232 I | etcdserver: compacted raft log at 1116375
-2016-12-21 15:20:56.644955 I | etcdserver: start to snapshot (applied: 1131485, lastsnap: 1121375)
-2016-12-21 15:20:56.680451 I | etcdserver: saved snapshot at index 1131485
-2016-12-21 15:20:56.778389 I | etcdserver: compacted raft log at 1126485
-2016-12-21 15:20:57.579623 I | etcdserver: start to snapshot (applied: 1141790, lastsnap: 1131485)
-2016-12-21 15:20:57.602151 I | etcdserver: saved snapshot at index 1141790
-2016-12-21 15:20:57.602430 I | etcdserver: compacted raft log at 1136790
-2016-12-21 15:20:58.528812 I | etcdserver: start to snapshot (applied: 1152184, lastsnap: 1141790)
-2016-12-21 15:20:58.606326 I | etcdserver: saved snapshot at index 1152184
-2016-12-21 15:20:58.673007 I | etcdserver: compacted raft log at 1147184
-2016-12-21 15:20:58.994744 I | wal: segmented wal file my-etcd-1.etcd/member/wal/000000000000000d-000000000011b24f.wal is created
-2016-12-21 15:20:59.326103 I | etcdserver: start to snapshot (applied: 1162325, lastsnap: 1152184)
-2016-12-21 15:20:59.347196 I | etcdserver: saved snapshot at index 1162325
-2016-12-21 15:20:59.347405 I | etcdserver: compacted raft log at 1157325
-2016-12-21 15:21:00.146116 I | etcdserver: start to snapshot (applied: 1172476, lastsnap: 1162325)
-2016-12-21 15:21:00.184978 I | etcdserver: saved snapshot at index 1172476
-2016-12-21 15:21:00.185231 I | etcdserver: compacted raft log at 1167476
-2016-12-21 15:21:00.823882 I | etcdserver: start to snapshot (applied: 1182512, lastsnap: 1172476)
-2016-12-21 15:21:00.838035 I | etcdserver: saved snapshot at index 1182512
-2016-12-21 15:21:00.838279 I | etcdserver: compacted raft log at 1177512
-2016-12-21 15:21:01.621116 I | etcdserver: start to snapshot (applied: 1192569, lastsnap: 1182512)
-2016-12-21 15:21:01.649156 I | etcdserver: saved snapshot at index 1192569
-2016-12-21 15:21:01.649536 I | etcdserver: compacted raft log at 1187569
-2016-12-21 15:21:02.464109 I | etcdserver: start to snapshot (applied: 1202748, lastsnap: 1192569)
-2016-12-21 15:21:02.486354 I | etcdserver: saved snapshot at index 1202748
-2016-12-21 15:21:02.486537 I | etcdserver: compacted raft log at 1197748
-2016-12-21 15:21:03.104774 I | etcdserver: start to snapshot (applied: 1212767, lastsnap: 1202748)
-2016-12-21 15:21:03.134637 I | etcdserver: saved snapshot at index 1212767
-2016-12-21 15:21:03.134847 I | etcdserver: compacted raft log at 1207767
-2016-12-21 15:21:03.798808 I | etcdserver: start to snapshot (applied: 1222845, lastsnap: 1212767)
-2016-12-21 15:21:03.870699 I | etcdserver: saved snapshot at index 1222845
-2016-12-21 15:21:03.870972 I | etcdserver: compacted raft log at 1217845
-2016-12-21 15:21:04.585204 I | etcdserver: start to snapshot (applied: 1233147, lastsnap: 1222845)
-2016-12-21 15:21:04.606285 I | etcdserver: saved snapshot at index 1233147
-2016-12-21 15:21:04.606509 I | etcdserver: compacted raft log at 1228147
-2016-12-21 15:21:05.387582 I | etcdserver: start to snapshot (applied: 1243251, lastsnap: 1233147)
-2016-12-21 15:21:05.423284 I | etcdserver: saved snapshot at index 1243251
-2016-12-21 15:21:05.434489 I | etcdserver: compacted raft log at 1238251
-2016-12-21 15:21:05.691624 I | wal: segmented wal file my-etcd-1.etcd/member/wal/000000000000000e-0000000000130d20.wal is created
-2016-12-21 15:21:06.158821 I | etcdserver: start to snapshot (applied: 1253370, lastsnap: 1243251)
-2016-12-21 15:21:06.192685 I | etcdserver: saved snapshot at index 1253370
-2016-12-21 15:21:06.192933 I | etcdserver: compacted raft log at 1248370
-2016-12-21 15:21:07.038263 I | etcdserver: start to snapshot (applied: 1263374, lastsnap: 1253370)
-2016-12-21 15:21:07.053020 I | etcdserver: saved snapshot at index 1263374
-2016-12-21 15:21:07.053234 I | etcdserver: compacted raft log at 1258374
-2016-12-21 15:21:07.603395 I | etcdserver: start to snapshot (applied: 1273402, lastsnap: 1263374)
-2016-12-21 15:21:07.651023 I | etcdserver: saved snapshot at index 1273402
-2016-12-21 15:21:07.850714 I | etcdserver: compacted raft log at 1268402
-2016-12-21 15:21:08.542760 I | etcdserver: start to snapshot (applied: 1283421, lastsnap: 1273402)
-2016-12-21 15:21:08.569114 I | etcdserver: saved snapshot at index 1283421
-2016-12-21 15:21:08.569648 I | etcdserver: compacted raft log at 1278421
-2016-12-21 15:21:09.349041 I | etcdserver: start to snapshot (applied: 1293446, lastsnap: 1283421)
-2016-12-21 15:21:09.372713 I | etcdserver: saved snapshot at index 1293446
-2016-12-21 15:21:09.373009 I | etcdserver: compacted raft log at 1288446
-2016-12-21 15:21:09.956261 I | etcdserver: start to snapshot (applied: 1303577, lastsnap: 1293446)
-2016-12-21 15:21:10.007237 I | etcdserver: saved snapshot at index 1303577
-2016-12-21 15:21:10.007518 I | etcdserver: compacted raft log at 1298577
-2016-12-21 15:21:10.811715 I | etcdserver: start to snapshot (applied: 1313636, lastsnap: 1303577)
-2016-12-21 15:21:10.846073 I | etcdserver: saved snapshot at index 1313636
-2016-12-21 15:21:10.846332 I | etcdserver: compacted raft log at 1308636
-2016-12-21 15:21:11.340065 I | etcdserver: start to snapshot (applied: 1323669, lastsnap: 1313636)
-2016-12-21 15:21:11.391846 I | etcdserver: saved snapshot at index 1323669
-2016-12-21 15:21:11.392112 I | etcdserver: compacted raft log at 1318669
-2016-12-21 15:21:12.180394 I | etcdserver: start to snapshot (applied: 1334225, lastsnap: 1323669)
-2016-12-21 15:21:12.199592 I | etcdserver: saved snapshot at index 1334225
-2016-12-21 15:21:12.199810 I | etcdserver: compacted raft log at 1329225
-2016-12-21 15:21:12.491205 I | wal: segmented wal file my-etcd-1.etcd/member/wal/000000000000000f-00000000001468e7.wal is created
-2016-12-21 15:21:12.877406 I | etcdserver: start to snapshot (applied: 1344440, lastsnap: 1334225)
-2016-12-21 15:21:12.907051 I | etcdserver: saved snapshot at index 1344440
-2016-12-21 15:21:12.907344 I | etcdserver: compacted raft log at 1339440
-2016-12-21 15:21:13.497849 I | etcdserver: start to snapshot (applied: 1354580, lastsnap: 1344440)
-2016-12-21 15:21:13.534303 I | etcdserver: saved snapshot at index 1354580
-2016-12-21 15:21:13.534550 I | etcdserver: compacted raft log at 1349580
-2016-12-21 15:21:14.475989 I | etcdserver: start to snapshot (applied: 1364866, lastsnap: 1354580)
-2016-12-21 15:21:14.547422 I | etcdserver: saved snapshot at index 1364866
-2016-12-21 15:21:14.610943 I | etcdserver: compacted raft log at 1359866
-2016-12-21 15:21:15.083798 I | etcdserver: start to snapshot (applied: 1374950, lastsnap: 1364866)
-2016-12-21 15:21:15.129413 I | etcdserver: saved snapshot at index 1374950
-2016-12-21 15:21:15.129779 I | etcdserver: compacted raft log at 1369950
-2016-12-21 15:21:15.554003 I | etcdserver: start to snapshot (applied: 1385120, lastsnap: 1374950)
-2016-12-21 15:21:15.571945 I | etcdserver: saved snapshot at index 1385120
-2016-12-21 15:21:15.572171 I | etcdserver: compacted raft log at 1380120
-2016-12-21 15:21:16.220515 N | pkg/osutil: received interrupt signal, shutting down...
-2016-12-21 15:21:16.228612 I | etcdserver: skipped leadership transfer for single member cluster
+2016-12-28 11:53:14.064062 I | etcdmain: etcd Version: 3.1.0-rc.1+git
+2016-12-28 11:53:14.064129 I | etcdmain: Git SHA: b940e0d
+2016-12-28 11:53:14.064140 I | etcdmain: Go Version: go1.7.4
+2016-12-28 11:53:14.064148 I | etcdmain: Go OS/Arch: linux/amd64
+2016-12-28 11:53:14.064161 I | etcdmain: setting maximum number of CPUs to 8, total number of available CPUs is 8
+2016-12-28 11:53:14.064176 W | etcdmain: no data-dir provided, using default data-dir ./my-etcd-1.etcd
+2016-12-28 11:53:14.065950 I | embed: listening for peers on http://localhost:2380
+2016-12-28 11:53:14.066325 I | embed: listening for client requests on localhost:2379
+2016-12-28 11:53:14.075159 I | etcdserver: name = my-etcd-1
+2016-12-28 11:53:14.075179 I | etcdserver: data dir = my-etcd-1.etcd
+2016-12-28 11:53:14.075190 I | etcdserver: member dir = my-etcd-1.etcd/member
+2016-12-28 11:53:14.075199 I | etcdserver: heartbeat = 100ms
+2016-12-28 11:53:14.075207 I | etcdserver: election = 1000ms
+2016-12-28 11:53:14.075216 I | etcdserver: snapshot count = 10000
+2016-12-28 11:53:14.075227 I | etcdserver: advertise client URLs = http://localhost:2379
+2016-12-28 11:53:14.075238 I | etcdserver: initial advertise peer URLs = http://localhost:2380
+2016-12-28 11:53:14.075250 I | etcdserver: initial cluster = my-etcd-1=http://localhost:2380
+2016-12-28 11:53:14.306294 I | etcdserver: starting member fd32987dcd0511e0 in cluster 755b248bfe852f6e
+2016-12-28 11:53:14.306864 I | raft: fd32987dcd0511e0 became follower at term 0
+2016-12-28 11:53:14.306947 I | raft: newRaft fd32987dcd0511e0 [peers: [], term: 0, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+2016-12-28 11:53:14.306960 I | raft: fd32987dcd0511e0 became follower at term 1
+2016-12-28 11:53:14.325341 I | etcdserver: starting server... [version: 3.1.0-rc.1+git, cluster version: to_be_decided]
+2016-12-28 11:53:14.327970 I | etcdserver/membership: added member fd32987dcd0511e0 [http://localhost:2380] to cluster 755b248bfe852f6e
+2016-12-28 11:53:15.107709 I | raft: fd32987dcd0511e0 is starting a new election at term 1
+2016-12-28 11:53:15.108360 I | raft: fd32987dcd0511e0 became candidate at term 2
+2016-12-28 11:53:15.108535 I | raft: fd32987dcd0511e0 received MsgVoteResp from fd32987dcd0511e0 at term 2
+2016-12-28 11:53:15.108573 I | raft: fd32987dcd0511e0 became leader at term 2
+2016-12-28 11:53:15.108588 I | raft: raft.node: fd32987dcd0511e0 elected leader fd32987dcd0511e0 at term 2
+2016-12-28 11:53:15.110526 I | etcdserver: setting up the initial cluster version to 3.1
+2016-12-28 11:53:15.112454 N | etcdserver/membership: set the initial cluster version to 3.1
+2016-12-28 11:53:15.112506 I | etcdserver/api: enabled capabilities for version 3.1
+2016-12-28 11:53:15.112554 I | embed: ready to serve client requests
+2016-12-28 11:53:15.112782 E | etcdmain: forgot to set Type=notify in systemd service file?
+2016-12-28 11:53:15.112838 I | etcdserver: published {Name:my-etcd-1 ClientURLs:[http://localhost:2379]} to cluster 755b248bfe852f6e
+2016-12-28 11:53:15.117224 N | embed: serving insecure client requests on 127.0.0.1:2379, this is strongly discouraged!
+2016-12-28 11:53:22.830673 I | etcdserver: start to snapshot (applied: 10043, lastsnap: 0)
+2016-12-28 11:53:22.848620 I | etcdserver: saved snapshot at index 10043
+2016-12-28 11:53:22.848820 I | etcdserver: compacted raft log at 5043
+2016-12-28 11:53:24.029362 I | etcdserver: start to snapshot (applied: 20078, lastsnap: 10043)
+2016-12-28 11:53:24.050760 I | etcdserver: saved snapshot at index 20078
+2016-12-28 11:53:24.050954 I | etcdserver: compacted raft log at 15078
+2016-12-28 11:53:25.093280 I | etcdserver: start to snapshot (applied: 30112, lastsnap: 20078)
+2016-12-28 11:53:25.114374 I | etcdserver: saved snapshot at index 30112
+2016-12-28 11:53:25.114523 I | etcdserver: compacted raft log at 25112
+2016-12-28 11:53:26.323355 I | etcdserver: start to snapshot (applied: 40115, lastsnap: 30112)
+2016-12-28 11:53:26.340008 I | etcdserver: saved snapshot at index 40115
+2016-12-28 11:53:26.340170 I | etcdserver: compacted raft log at 35115
+2016-12-28 11:53:27.597250 I | etcdserver: start to snapshot (applied: 50137, lastsnap: 40115)
+2016-12-28 11:53:27.617264 I | etcdserver: saved snapshot at index 50137
+2016-12-28 11:53:27.617448 I | etcdserver: compacted raft log at 45137
+2016-12-28 11:53:28.776001 I | etcdserver: start to snapshot (applied: 60143, lastsnap: 50137)
+2016-12-28 11:53:28.799702 I | etcdserver: saved snapshot at index 60143
+2016-12-28 11:53:28.799908 I | etcdserver: compacted raft log at 55143
+2016-12-28 11:53:30.134084 I | etcdserver: start to snapshot (applied: 70180, lastsnap: 60143)
+2016-12-28 11:53:30.157780 I | etcdserver: saved snapshot at index 70180
+2016-12-28 11:53:30.157909 I | etcdserver: compacted raft log at 65180
+2016-12-28 11:53:31.412847 I | etcdserver: start to snapshot (applied: 80233, lastsnap: 70180)
+2016-12-28 11:53:31.435179 I | etcdserver: saved snapshot at index 80233
+2016-12-28 11:53:31.435360 I | etcdserver: compacted raft log at 75233
+2016-12-28 11:53:32.239194 I | wal: segmented wal file my-etcd-1.etcd/member/wal/0000000000000001-00000000000150dd.wal is created
+2016-12-28 11:53:32.746398 I | etcdserver: start to snapshot (applied: 90239, lastsnap: 80233)
+2016-12-28 11:53:32.767019 I | etcdserver: saved snapshot at index 90239
+2016-12-28 11:53:32.767143 I | etcdserver: compacted raft log at 85239
+2016-12-28 11:53:33.885182 I | etcdserver: start to snapshot (applied: 100240, lastsnap: 90239)
+2016-12-28 11:53:33.903243 I | etcdserver: saved snapshot at index 100240
+2016-12-28 11:53:33.903406 I | etcdserver: compacted raft log at 95240
+2016-12-28 11:53:44.326728 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000000273b.snap successfully
+2016-12-28 11:53:44.326963 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000004e6e.snap successfully
+2016-12-28 11:53:44.327109 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-00000000000075a0.snap successfully
+2016-12-28 11:53:44.327248 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-0000000000009cb3.snap successfully
+2016-12-28 11:53:44.327380 I | pkg/fileutil: purged file my-etcd-1.etcd/member/snap/0000000000000002-000000000000c3d9.snap successfully
